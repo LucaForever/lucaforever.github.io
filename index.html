@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luca | Software Engineer</title>
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="js/main.js" defer></script>
-</head>
-
-<body>
-  <nav class="nav fixed block w-full h-16">
-    <ul class="nav-items flex items-start justify-around">
-      <li class="navitem portfolio">
-        <a href="#projects"><span>Portfolio</span></a>
-        <div class="portfolio-drop"><p>Currently no projects to add... :(</p></div>
-      </li>
-      <li class="navitem">
-        <a href=""><span>About</span></a>
-      </li>
-      <li class="navitem">
-        <a href=""><span>Contact</span></a>
-      </li>
-      <li data-social="true" class="navitem -ml-auto">
-        <a href="https://twitter.com/lucaforever_dev" class="fa fa-twitter text-2xl" alt="Twitter"></a>
-      </li>
-      <li data-social="true" class="navitem">
-        <a href="https://dribbble.com/LucaForever" class="fa fa-dribbble text-2xl" alt="Dribble"></a>
-      </li>
-    </ul>
-  </nav>
-  <main class="relative w-full overflow-x-hidden">
-    <div class="title">
-      <h1 class="intro">Hi! I'm Luca.</h1>
-      <p class="des">I'm a student interested in Software and it's inner workings. I love working with UI, to create modern and nice looking apps and websites.</p>
-      <div class="scene">
-        <div class="cube cube-rotate">
-          <div class="cube_face cube_face--front"><span>Java Developer<img src="assets/Java.svg"/></span></div>
-          <div class="cube_face cube_face--back"><span>Video Editor<img src="assets/Video.svg"/></span></div>
-          <div class="cube_face cube_face--right"></div>
-          <div class="cube_face cube_face--left"><span>JavaScript Developer<img src="assets/JS.svg"/></span></div>
-          <div class="cube_face cube_face--top"><span>C++ Developer<sv>C++</sv></span></div>
-          <div class="cube_face cube_face--bottom"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luca | Software Engineer</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="navigation">
+        <li class="navitem portfolio">
+          <a href="#projects"><span>Portfolio</span></a>
+          <ul class="portfolio-drop" aria-hidden="true">
+            <li><a href="#kingalts">KingAlts</a></li>
+          </ul>
+        </li>
+        <li class="navitem">
+          <a href=""><span>About</span></a>
+        </li>
+        <li class="navitem">
+          <a href=""><span>Contact</span></a>
+        </li>
+        <li data-social="true" class="navitem" style="margin-left: auto;">
+          <a href="https://twitter.com/lucaforever_dev" class="bx bxl-twitter" alt="Twitter"></a>
+        </li>
+        <li data-social="true" class="navitem">
+          <a href="https://dribbble.com/LucaForever" class="bx bxl-dribbble" alt="Dribble"></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="title">
+        <div class="text">
+          <h1 class="intro">Hi! I'm Luca.</h1>
+          <p class="description">Also know as <span >LucaForever</span> or <span>lucaledd</span>,
+            I'm a student interested in software and it's inner workings. I love working with UI,
+            to create <span class="accent2">modern</span> and <span class="accent2">nice looking</span> <span class="accent3">apps</span> and <span class="accent3">websites.</span></p>
         </div>
+        <div class="scene" style="background: rgb(233, 235, 246)">
+          <div class="animate-box" style="background: rgba(33, 33, 33, 0); border-radius: 30%">
+              <svg class="svg-container" viewBox="-50 -50 200 200" style="transform: rotate(20deg)">
+                  <circle cx="50" cy="50" r="40" class="sun-circle" style="fill: rgb(92, 107, 192)"></circle>
+                  <circle cx="72" cy="34" r="40" class="moon-shadow" style="fill: rgb(92, 107, 192); transform: translateX(54px) translateY(-4px) scale(0.5);"></circle>
+  
+                  <line x1="50" y1="-25" x2="50" y2="-5" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
+                  <line x1="50" y1="125" x2="50" y2="105" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
+  
+                  <line x1="-25" y1="50" x2="-5" y2="50" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
+                  <line x1="125" y1="50" x2="105" y2="50" class="sun-rays" style="stroke: rgb(92, 107, 192);"></line>
+  
+                  <line x1="-5" y1="-5" x2="10" y2="10" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
+                  <line x1="90" y1="90" x2="105" y2="105" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
+  
+                  <line x1="15" y1="85" x2="-5" y2="105" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
+                  <line x1="105" y1="-5" x2="85" y2="15" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
+  
+                  Sorry, your browser does not support inline SVG.
+              </svg>
+          </div>
+          <div class="fragment-bg">
+            <i class="bx bxl-javascript" style="color:#ffd300"></i>
+            <i class="bx bxl-java" style="color:#ffffff"></i>
+            <i class="bx bxs-video" style="color:#ffffff" ></i>
+            <i class="bx bxl-c-plus-plus" style="color:#0824c2"  ></i>
+          </div>
+          <div class="fragment"></div>
+          <script src="/assets/js/grid.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+          <script src="/assets/js/animation.js"></script>
+        </div>
+    </main>
+    <section id="projects">
+      <div class="project-wrapper">
+        <a id="kingalts" class="project" href="https://kingalts.shop">
+          <h3>Website</h3>
+          <h1>KingAlts</h1>
+          <!-- <img src="/assets/images/projects/kingalts.png" alt /> -->
+        </a>
       </div>
-    </div>
-  </main>
-  <section id="projects" class="relative block overflow-x-hidden">
-    <div class="prjwrapper">
-      <div id="placeholder" class="project">
-        <h3>Project Platform</h3>
-        <h1>To be added...</h1>
-      </div>
-    </div>
-  </section>
-  <footer id="footer" class="relative overflow-x-hidden">
-    <p>Website heavily inspired from <a href="https://www.seanhalpin.design/">Seán Halpin's Website</a> ♥</p>
-  </footer>
-</body>
-
+    </section>
+    <footer id="footer" class="relative overflow-x-hidden">
+      <p>Website heavily inspired from <a href="https://www.seanhalpin.design/">Seán Halpin's Website</a> ♥</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+  </body>
 </html>
