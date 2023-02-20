@@ -1,0 +1,358 @@
+@import url(./util/product-icons.css);
+
+body {
+    height: 100%;
+    /* background: linear-gradient(45deg, #0f0436 0%,#050916 100%); */
+    background: #050916;
+}
+
+.intro {
+    height: 100vh;
+}
+
+.product-section {
+    height: 100vh;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+.product-section h1 {
+    position: relative;
+    text-align: center;
+    font-size: 4.5em;
+}
+
+#product-streaming {
+    margin-bottom: 90vh;
+}
+
+.products {
+    position: relative;
+    height: 370px;
+    width: 850px;
+    margin: 0 auto;
+    top: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+.product-tab {
+    transition: all .5s var(--bezier);
+    position: relative;
+    margin: 20px 30px 50px;
+    width: 370px;
+    height: 300px;
+    top: 0;
+    background-color: #11101D;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow:
+      0 0 90px 5px rgba(79, 37, 196, 0.644),
+      0 0 500px 10px rgba(119, 0, 255, 0.644);
+}
+
+.purchase-tab-top {
+    transition: all .4s var(--bezier);
+    width: 370px;
+    height: 170px;
+    border-radius: 5px;
+    background-color: var(--accent);
+}
+
+.product-tab:hover .purchase-tab-top {
+    height: 130px;
+}
+
+.product-tab:hover .products-price {
+    margin: 65px auto;
+}
+
+.product-tab:hover .products-price-before {
+    opacity: 0;
+}
+
+.product-tab:has(img.netflix) {
+    box-shadow:
+      0 0 90px 5px #ac242491,
+      0 0 500px 10px #be0a0a91;
+}
+
+#netflix-top {
+    background-color: #ac2424;
+}
+#netflix-button {
+    background-color: #ac2424;
+}
+#crunchyroll-top {
+    background-color: #bb772d;
+}
+#crunchyroll-button {
+    background-color: #bb772d;
+}
+#disneyplus-top {
+    background-color: #4e5fca;
+}
+#disneyplus-button {
+    background-color: #4e5fca;
+}
+#napster-top {
+    background-color: #202020;
+}
+#napster-button {
+    background-color: #202020;
+}
+#wish-top {
+    background-color: #3a80c6;
+}
+#wish-button {
+    background-color: #3a80c6;
+}
+#onlyfans-top {
+    background-color: #2f7ec4;
+}
+#onlyfans-button {
+    background-color: #2f7ec4;
+}
+#ph-top {
+    background-color: #f60;
+}
+#ph-button {
+    background-color: #f60;
+}
+#hulu-top {
+    background-color: #2d8e40;
+}
+#hulu-button {
+    background-color: #2d8e40;
+}
+#vypr-top {
+    background-color: #2a2a2a;
+}
+#vypr-button {
+    background-color: #2a2a2a;
+}
+#surfshark-top {
+    background-color: #167d94;
+}
+#surfshark-button {
+    background-color: #167d94;
+}
+#ipvanish-top {
+    background-color: #559b32;
+}
+#ipvanish-button {
+    background-color: #559b32;
+}
+
+.product-tab button {
+    position: relative;
+    transition: all .4s var(--bezier);
+    border: none;
+    color: #fff;
+    padding: 15px 90px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 auto;
+    background-color: var(--accent);
+    cursor: pointer;
+    border-radius: 5px;
+    top: 20px;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+.products-price {
+    transition: all .4s var(--bezier);
+    color: #fff;
+    font-size: 2.5em;
+    margin: -40px auto;
+}
+
+.products-price-before {
+    transition: all .4s var(--bezier);
+    position: relative;
+    color: #9f9f9f;
+    font-size: 1em;
+    bottom: 25px;
+    text-decoration: line-through;
+    opacity: 1;
+  }
+
+.purchase-tab-top h1 {
+    font-size: 1.8em;
+    line-height: 150px;
+}
+
+/* sidebar */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 56px;
+    background: #11101D;
+    padding: 6px;
+    z-index: 160;
+    transition: all 0.5s var(--bezier);
+}
+
+.sidebar.open {
+    width: 250px;
+    padding: 6px 16px;
+}
+
+.sidebar .title {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar .title .name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+
+    transition: all 0.5s var(--bezier);
+}
+
+.sidebar.open .title .name {
+    opacity: 1;
+}
+
+.sidebar .title #btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    transition: all 0.4s var(--bezier);
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s var(--bezier);
+}
+
+.sidebar.open .title #btn {
+    text-align: right;
+}
+
+.sidebar i {
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sidebar .nav-list {
+    margin-top: 20px;
+    height: 100%;
+}
+
+h1 span {
+    color: #4a77fd;
+}
+
+.sidebar li {
+    opacity: 0;
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+.sidebar.open li {
+    opacity: 1;
+}
+
+.sidebar li a {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s var(--bezier);
+}
+
+.sidebar li:not(.profile) a {
+    background: #11101D;
+}
+
+.sidebar li:not(.profile) a:hover {
+    background: #eee;
+}
+
+.sidebar li a .links_name {
+    font-size: 15px;
+    white-space: nowrap;
+    padding-left: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sidebar.open li a .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+    transition: all 0.5s var(--bezier);
+    color: #11101D;
+}
+
+.sidebar li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.sidebar li.profile {
+    opacity: 1;
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 4px;
+    bottom: 4px;
+    padding: 10px 0;
+    transition: all 0.5s var(--bezier);
+    overflow: hidden;
+}
+
+.sidebar.open li.profile {
+    width: 250px;
+    padding: 10px 6px;
+}
+
+.sidebar li.profile:hover {
+    background-color: transparent;
+}
+
+.sidebar li .profile-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.sidebar li i {
+    font-size: 3em;
+    object-fit: cover;
+}

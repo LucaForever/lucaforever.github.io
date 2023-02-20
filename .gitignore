@@ -1,6 +1,8 @@
 # Static Website
 yarn.lock
 package.json
+.yarn
+.yarnrc.yml
 
 # Logs
 logs
