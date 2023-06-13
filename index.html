@@ -5,23 +5,28 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luca | Software Engineer</title>
-    <meta content="Luca | Software Engineer" property="og:title" />
-    <meta content="Hi! I'm Luca. I'm a student interested in software and it's inner workings." property="og:description" />
-    <meta content="https://lucaforever.com" property="og:url" />
-    <meta content="https://lucaforever.com/favicon.png" property="og:image" />
-    <meta content="#640080" data-react-helmet="true" name="theme-color" />
+
+    <!-- style -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- animation scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+    <script src="/assets/js/grid.js" type="module" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" defer></script>
+    <script src="/assets/js/animation.js" type="module" defer></script>
+
+    <!-- other page scripts -->
+    <script src="/assets/js/scroll.js" type="module" defer></script>
+    <script src="/assets/js/main.js" type="module" defer></script>
   </head>
-  <body>
+  <body style="overflow-x: hidden;">
     <nav>
       <ul class="navigation">
         <li class="navitem portfolio">
           <a href="#projects"><span>Portfolio</span></a>
-          <ul class="portfolio-drop" aria-hidden="true">
-            <li><a href="#kingalts">KingAlts</a></li>
-          </ul>
+          <ul class="portfolio-drop"></ul>
         </li>
         <li class="navitem">
           <a href=""><span>About</span></a>
@@ -42,12 +47,12 @@
         <div class="title">
           <div class="text">
             <h1 class="intro">Hi! I'm Luca.</h1>
-            <p class="description">Also known as <span >LucaForever</span> or <span>lucaledd</span>,
+            <p class="description">Also known as <span>LucaForever</span> or <span>lucaledd</span>,
               I'm a student interested in software and it's inner workings. I love working with UI,
               to create <span class="accent2">modern</span> and <span class="accent2">nice looking</span> <span class="accent3">apps</span> and <span class="accent3">websites.</span></p>
           </div>
           <div class="scene" style="background: rgb(233, 235, 246)">
-            <div class="animate-box" style="background: rgba(33, 33, 33, 0); border-radius: 30%">
+            <div class="animate-box" style="background: rgba(246, 246, 246, 0); border-radius: 30%">
                 <svg class="svg-container" viewBox="-50 -50 200 200" style="transform: rotate(20deg)">
                     <circle cx="50" cy="50" r="40" class="sun-circle" style="fill: rgb(92, 107, 192)"></circle>
                     <circle cx="72" cy="34" r="40" class="moon-shadow" style="fill: rgb(92, 107, 192); transform: translateX(54px) translateY(-4px) scale(0.5);"></circle>
@@ -74,25 +79,26 @@
               <i class="bx bxl-c-plus-plus" style="color:#0824c2"  ></i>
             </div>
             <div class="fragment"></div>
-            <script src="/assets/js/grid.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-            <script src="/assets/js/animation.js"></script>
           </div>
         </div>
       </div>
     </main>
     <section id="projects">
-      <div class="project-wrapper">
-        <a id="kingalts" class="project" href="/projects/kingalts/index.html">
+      <div class="project-wrapper" style="transform: translateX(0px)">
+        <a class="project" href="/projects/kingalts/index.html">
           <h3>Website</h3>
           <h1>KingAlts</h1>
           <img src="/projects/images/kingalts.gif" class="project-image" alt />
         </a>
+        <a class="project" href="/projects/fluxclient/index.html">
+          <h3>Website</h3>
+          <h1>Flux Client</h1>
+          <img src="/projects/images/fluxclient.png" class="project-image" alt />
+        </a>
       </div>
     </section>
     <footer id="footer" class="relative overflow-x-hidden">
-      <p>Website heavily inspired from <a href="https://www.seanhalpin.design/">Seán Halpin's Website</a> ♥</p>
+      <p>made by <a href="https://lucaforever.com">LucaForever</a> ♥ you can see the source code <a href="https://github.com/LucaForever/lucaforever.com">here</a></p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
   </body>
 </html>

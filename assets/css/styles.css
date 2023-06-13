@@ -3,10 +3,12 @@
 
 :root {
   --bezier: cubic-bezier(.25, .46, .45, .94);
-  --background: linear-gradient(135deg, #141414, #1a1a1a);
-  --nav-background: linear-gradient(135deg, #141414aa, #171717aa);
-  --light-background: #242424;
-  --text-clr: #c7c7c7;
+  --clr-main: 239, 239, 239;
+  --clr-sec: 216, 216, 216;
+  --background: linear-gradient(135deg, rgb(var(--clr-sec)), rgb(var(--clr-main)));
+  --nav-background: linear-gradient(135deg, rgb(var(--clr-sec), 120), rgb(var(--clr-main), 120));
+  --light-background: #c7c7c7;
+  --text-clr: #181818;
   --accent-pink: 197, 24, 154;
   --accent-purple: 129, 0, 189;
   --accent-orange: 189, 192, 31;
@@ -21,8 +23,9 @@
   
   font-family: var(--font-smooth);
   font-size: 16px;
+  text-shadow: 2px 2px 2px rgb(rgb(232, 232, 232));
   
-  color-scheme: dark;
+  color-scheme: light;
   color: var(--text-clr);
   background: var(--background);
 }
@@ -31,9 +34,8 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
-  top: 15vh;
-
-  margin-bottom: 30vh;
+  top: 12vh;
+  margin-bottom: 26vh;
 }
 
 .main-wrapper {
@@ -52,16 +54,20 @@ main {
 
 .title > .text {
   grid-row: span 2;
+  margin-bottom: 2em;
 }
 
 .intro {
   font-family: var(--font-rough);
-  font-size: clamp(3em, 8vw, 4em);
+  font-size: clamp(5em, 10vw, 4em);
+  text-align: center;
   font-weight: 600;
+
+  word-wrap: break-word;
 }
 
 .description {
-  font-size: clamp(1em, 3vw, 1.5em);
+  font-size: clamp(1.2em, 3vw, 1.7em);
 }
 
 .intro,
@@ -105,8 +111,8 @@ main {
 .fragment-bg {
   position: absolute;
   padding: clamp(4rem, 3vw, 8rem);
-  height: 99%;
-  width: 99%;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
 
@@ -184,11 +190,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3em;
+
+  transition: transform 500ms var(--bezier);
 }
 
 .project {
   position: relative;
-  background: #22222281;
+  background: rgb(var(--clr-main));
   width: 100%;
   max-height: 600px;
   padding: 3em;
@@ -197,17 +206,70 @@ main {
   transition: box-shadow 150ms var(--bezier), border 250ms var(--bezier);
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  main {
+    top: 25vh;
+    margin-bottom: 45vh;
+  }
+
+  .intro {
+    text-align: left;
+  }
+  
+  .scene {
+    width: clamp(21rem, 65vw, 30rem);
+  }
+
+  .title {
+    display: grid;
+    grid-template-areas:
+        "intro scene scene"
+        "intro scene scene"; 
+    gap: 6rem;
+    place-items: center;
+    width: min(90vw, 1200px);
+    margin: 0 auto;
+  }
+
+  .project-wrapper {
+    flex-direction: row;
+  }
+  
+  .project {
+    display: grid; 
+    grid-template-columns: auto auto; 
+    grid-template-rows: 0.2fr 1.8fr; 
+    gap: 0px 0px; 
+    min-height: 600px;
+    min-width: 100%;
+    grid-template-areas: 
+      "type img"
+      "name img"; 
+  }
+
+  .project img {
+    display: block !important;
+    position: relative !important;
+    height: 100%;
+    padding: 2em;
+    border-radius: 3em;
+    justify-self: end; 
+    grid-area: img;
+  }
+}
+
 .project:hover {
   box-shadow:
-    0 0 70px 10px rgba(var(--accent-purple), 0.344),
-    0 0 900px 20px rgba(var(--accent-pink), 0.344);
+    0 0 20px 10px rgba(var(--accent-purple), 0.344),
+    0 0 150px 20px rgba(var(--accent-pink), 0.344);
 }
 
 .project h1 {
   position: relative;
   display: block;
   font-size: clamp(1em, 8vw, 2.6em);
-  color: #d8d8d8;
+  color: var(--text-clr);
   grid-area: name;
 }
 
@@ -215,7 +277,7 @@ main {
   position: relative;
   display: block;
   font-size: clamp(0.8em, 5vw, 1.4em);
-  color: #8f8f8f;
+  color: var(--text-clr);
   text-transform: uppercase;
   grid-area: type;
 }
@@ -275,7 +337,7 @@ nav {
   display: block;
   padding-bottom: 2px;
   
-  background: rgb(var(--accent-gradient));
+  background: var(--accent-gradient);
   background-size: 0 0.2em;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -298,8 +360,7 @@ nav {
 
 .portfolio-drop {
   position: absolute;
-  opacity: none;
-  background-color: var(--light-background);
+  background: var(--nav-background);
   padding: 0 18px;
   border-radius: 10px;
   opacity: 0;
@@ -311,6 +372,10 @@ nav {
 .portfolio:hover .portfolio-drop {
   opacity: 1;
   pointer-events: all;
+}
+
+.portfolio-drop > li > a {
+  padding: 0.77em 0;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -327,43 +392,7 @@ nav {
 @media only screen and (min-width: 768px) {
   
 }
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .scene {
-    width: clamp(21rem, 65vw, 30rem);
-  }
 
-  .title {
-    display: grid;
-    grid-template-areas:
-        "intro scene scene"
-        "intro scene scene"; 
-    gap: 6rem;
-    place-items: center;
-    width: min(90vw, 1200px);
-    margin: 0 auto;
-  }
-
-  .project {
-    display: grid; 
-    grid-template-columns: auto auto; 
-    grid-template-rows: 0.2fr 1.8fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "type img"
-      "name img"; 
-  }
-
-  .project img {
-    display: block;
-    position: relative;
-    height: 100%;
-    padding: 2em;
-    border-radius: 3em;
-    justify-self: end; 
-    grid-area: img;
-  }
-}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 

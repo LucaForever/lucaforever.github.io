@@ -1,0 +1,109 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #5d1196, #00bfa5;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth
+}
+
+rb {
+    color: #91179c
+}
+
+@-webkit-keyframes rbtext {
+    0% {
+        background-position: 0
+    }
+
+    to {
+        background-position: 500px
+    }
+}
+
+@keyframes rbtext {
+    0% {
+        background-position: 0
+    }
+
+    to {
+        background-position: 500px
+    }
+}
+
+a:not(:has(.nav)) {
+    color: #0070f3;
+    -webkit-text-decoration: underline #0070f300;
+    text-decoration: underline #0070f300;
+    -webkit-animation: runderline .25s ease-out forwards;
+    animation: runderline .25s ease-out forwards
+}
+
+a:not(:has(.nav)):active,
+a:not(:has(.nav)):focus,
+a:not(:has(.nav)):hover {
+    -webkit-animation: underline .25s ease-out both;
+    animation: underline .25s ease-out both
+}
+
+@-webkit-keyframes underline {
+    0% {
+        -webkit-text-decoration: underline #0070f300;
+        text-decoration: underline #0070f300
+    }
+
+    to {
+        -webkit-text-decoration: underline #0070f3;
+        text-decoration: underline #0070f3
+    }
+}
+
+@keyframes underline {
+    0% {
+        -webkit-text-decoration: underline #0070f300;
+        text-decoration: underline #0070f300
+    }
+
+    to {
+        -webkit-text-decoration: underline #0070f3;
+        text-decoration: underline #0070f3
+    }
+}
+
+@-webkit-keyframes runderline {
+    0% {
+        -webkit-text-decoration: underline #0070f3;
+        text-decoration: underline #0070f3
+    }
+
+    to {
+        -webkit-text-decoration: underline #0070f300;
+        text-decoration: underline #0070f300
+    }
+}
+
+@keyframes runderline {
+    0% {
+        -webkit-text-decoration: underline #0070f3;
+        text-decoration: underline #0070f3
+    }
+
+    to {
+        -webkit-text-decoration: underline #0070f300;
+        text-decoration: underline #0070f300
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    color-scheme: dark
+}
+
+body {
+    color: #fff;
+    background: #111
+}

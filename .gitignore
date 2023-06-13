@@ -4,6 +4,10 @@ package.json
 .yarn
 .yarnrc.yml
 
+# Project specific
+about
+assets/css/about
+
 # Logs
 logs
 *.log
