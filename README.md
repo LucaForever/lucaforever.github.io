@@ -1,3 +1,3 @@
-## Source code of lucaforever.com
+## Source code of my website
 
-Domain is currently down. Use the Github Pages URL to see the website: https://lucaforever.github.io/lucaforever.com/
+New domain: https://lucaforever.is-a.dev/
