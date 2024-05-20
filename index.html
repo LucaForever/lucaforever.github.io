@@ -18,27 +18,26 @@
     <script src="./assets/js/animation.js" type="module" defer></script>
 
     <!-- other page scripts -->
-    <script src="./assets/js/scroll.js" type="module" defer></script>
     <script src="./assets/js/main.js" type="module" defer></script>
   </head>
-  <body style="overflow-x: hidden;">
+  <body>
     <nav>
       <ul class="navigation">
         <li class="navitem portfolio">
           <a href="#projects"><span>Portfolio</span></a>
           <ul class="portfolio-drop"></ul>
         </li>
-        <li class="navitem">
+        <!-- <li class="navitem">
           <a href=""><span>About</span></a>
         </li>
         <li class="navitem">
           <a href=""><span>Contact</span></a>
-        </li>
+        </li> -->
         <li data-social="true" class="navitem" style="margin-left: auto;">
-          <a href="https://twitter.com/lucaforever_dev" class="bx bxl-twitter" alt="Twitter"></a>
+          <a href="https://twitter.com/lucaledd" class="bx bxl-twitter" alt="Twitter"></a> 
         </li>
         <li data-social="true" class="navitem">
-          <a href="https://dribbble.com/LucaForever" class="bx bxl-dribbble" alt="Dribble"></a>
+          <a href="https://github.com/lucaforever" class="bx bxl-github" alt="GitHub"></a> 
         </li>
       </ul>
     </nav>
@@ -84,21 +83,23 @@
       </div>
     </main>
     <section id="projects">
-      <div class="project-wrapper" style="transform: translateX(0px)">
-        <a class="project" href="./projects/kingalts/">
+      <div class="project-wrapper">
+        <a id="swift" class="project" href="https://swiftproject.top">
+          <h3>Website</h3>
+          <h1>Swift Project</h1>
+          <img src="./projects/images/swiftproject.jpg" class="project-image" alt />
+        </a>
+        <a id="kingalts" class="project" href="./projects/kingalts/">
           <h3>Website</h3>
           <h1>KingAlts</h1>
           <img src="./projects/images/kingalts.gif" class="project-image" alt />
         </a>
-        <a class="project" href="./projects/fluxclient/">
+        <a id="fluxclient" class="project" href="./projects/fluxclient/">
           <h3>Website</h3>
           <h1>Flux Client</h1>
           <img src="./projects/images/fluxclient.png" class="project-image" alt />
         </a>
       </div>
     </section>
-    <footer id="footer" class="relative overflow-x-hidden">
-      <p>made by <a href="https://github.com/lucaforever">LucaForever</a> ♥ you can see the source code <a href="https://github.com/lucaforever/website">here</a></p>
-    </footer>
   </body>
 </html>

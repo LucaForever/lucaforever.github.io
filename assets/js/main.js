@@ -5,7 +5,7 @@ const projects = document.querySelectorAll(".project-wrapper > .project").forEac
     const content = document.createElement("a")
 
     content.textContent = e.children.item(1).textContent
-    content.href = "#projects"
+    content.href = `#${e.id}`
     node.appendChild(content)
 
     dropdown.appendChild(node)
