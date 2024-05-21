@@ -21,6 +21,6 @@ var animation = anime
     }, 0)
     .add({ targets: ".svg-container", rotate: [40, 0] }, 0)
     .add({ targets: ".scene", background: "#212121"}, 0)
-    .add({ targets: ".fr", background: "rgb(75, 25, 75)", delay: anime.stagger(125, {grid: [7, 7], from: 'center'})})
+    .add({ targets: ".fr", background: "rgb(75, 25, 75)", delay: anime.stagger(100, {grid: [7, 7], from: 'center'})})
     .add({ targets: ".fragment-bg", opacity: 1})
-    .add({ targets: ".fr", opacity: 0, delay: anime.stagger(250, {grid: [7, 7], from: 'center'})});
+    .add({ targets: ".fr", opacity: 0, delay: anime.stagger(100, {grid: [7, 7], from: 'center'})});

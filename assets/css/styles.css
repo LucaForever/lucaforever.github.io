@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --bezier: cubic-bezier(.25, .46, .45, .94);
@@ -7,11 +7,11 @@
   --clr-sec: 216, 216, 216;
   --background: linear-gradient(135deg, rgb(var(--clr-sec)), rgb(var(--clr-main)));
   --nav-background: linear-gradient(135deg, rgb(var(--clr-sec), 120), rgb(var(--clr-main), 120));
-  --light-background: #c1c1c1;
+  --light-background: #c7c7c7;
   --text-clr: #181818;
   --accent-pink: 197, 24, 154;
   --accent-purple: 129, 0, 189;
-  --accent-orange: 189, 192, 31;
+  --accent-orange: 209, 120, 4;
   --accent-red: 211, 26, 26;
   --accent-aqua: 31, 190, 253;
   --accent-blue: 77, 33, 236;
@@ -35,7 +35,7 @@ main {
   width: 100%;
   height: 100%;
   top: 12vh;
-  margin-bottom: 26vh;
+  margin-bottom: 32vh;
 }
 
 .main-wrapper {
@@ -49,7 +49,7 @@ main {
   gap: 2rem;
 
   margin: 0 auto;
-  width: min(90vw, 600px);
+  width: 90vw;
 }
 
 .title > .text {
@@ -71,21 +71,21 @@ main {
 }
 
 .intro,
-.description > span {
+.description span {
   background: var(--accent-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.description > .accent2 {
+.description span.accent2 {
   background: var(--accent2-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.description > .accent3 {
+.description span.accent3 {
   background: var(--accent3-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -181,6 +181,7 @@ main {
   display: block;
   width: min(90vw, 1100px);
   margin: 0 auto;
+  margin-bottom: 5vh;
 }
 
 .project-wrapper {
@@ -199,7 +200,7 @@ main {
   position: relative;
   background: rgb(var(--clr-main));
   width: 100%;
-  max-height: 600px;
+  max-height: 500px;
   padding: 3em;
   border-radius: 20px;
 
@@ -210,7 +211,7 @@ main {
 @media only screen and (min-width: 992px) {
   main {
     top: 25vh;
-    margin-bottom: 45vh;
+    margin-bottom: 48vh;
   }
 
   .intro {
@@ -228,34 +229,35 @@ main {
         "intro scene scene"; 
     gap: 6rem;
     place-items: center;
-    width: min(90vw, 1200px);
+    max-width: 80%;
     margin: 0 auto;
   }
   
   .project {
     display: grid; 
     grid-template-columns: auto auto; 
-    grid-template-rows: 0.2fr 1.8fr; 
+    grid-template-rows: 0.3fr 0.6fr 2.4fr;
     gap: 0px 0px; 
-    min-height: 600px;
+    min-height: 500px;
     min-width: 100%;
     grid-template-areas: 
       "type img"
-      "name img"; 
+      "name img"
+      "desc img";
   }
 
   .project img {
     display: block !important;
     position: relative !important;
-    max-height: 100%;
+    max-height: 80%;
     padding: 2em;
-    border-radius: 3em;
+    border-radius: 42px;
     justify-self: end; 
     grid-area: img;
   }
 }
 
-.project:hover {
+.project:is(:hover, :focus) {
   box-shadow:
     0 0 20px 10px rgba(var(--accent-purple), 0.344),
     0 0 150px 20px rgba(var(--accent-pink), 0.344);
@@ -267,6 +269,14 @@ main {
   font-size: clamp(1em, 8vw, 2.6em);
   color: var(--text-clr);
   grid-area: name;
+}
+
+.project p {
+  position: relative;
+  display: block;
+  font-size: clamp(0.6em, 5vw, 1.1em);
+  color: var(--text-clr);
+  grid-area: desc;
 }
 
 .project h3 {
@@ -300,6 +310,8 @@ nav {
   width: 100%;
 
   background: var(--nav-background);
+  box-shadow:
+    0 0 30px 10px rgba(var(--accent-purple), 0.144);
   z-index: 900;
 }
 
