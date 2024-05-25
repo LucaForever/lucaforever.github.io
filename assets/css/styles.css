@@ -40,6 +40,8 @@ main {
 
 .main-wrapper {
   position: relative;
+  width: min(115rem, 90vw);
+  margin: 0 auto;
 }
 
 .title {
@@ -179,7 +181,7 @@ main {
 #projects {
   position: relative;
   display: block;
-  width: min(90vw, 1100px);
+  width: min(90vw, 1200px);
   margin: 0 auto;
   margin-bottom: 5vh;
 }
