@@ -1,2 +1,9 @@
 User-agent: *
-Disallow: /
+Disallow: /cdn-cgi/bm/cv/
+Disallow: /cdn-cgi/challenge-platform/
+Disallow: /cdn-cgi/images/trace/
+Disallow: /cdn-cgi/rum
+Disallow: /cdn-cgi/scripts/
+Disallow: /cdn-cgi/styles/
+Disallow: /cdn-fpw/sxg/
+Disallow: /projects/
