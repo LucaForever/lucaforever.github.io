@@ -1,12 +1,21 @@
-const dropdown = document.querySelector(".portfolio-drop")
+const resolution = 8;
 
-const projects = document.querySelectorAll(".project-wrapper > .project").forEach(e => {
-    const node = document.createElement("li")
-    const content = document.createElement("a")
+const init = () => {
+    const doc = document.querySelector(".render");
 
-    content.textContent = e.children.item(1).textContent
-    content.href = `#${e.id}`
-    node.appendChild(content)
+    const width = window.innerWidth;
+    const height = window.innerHeight;
 
-    dropdown.appendChild(node)
-});
+    const squareWidth = width / resolution;
+    
+    for(let i = 0; i < resolution; i++) {
+        const square = document.createElement("div");
+        square.classList.add("square");
+
+        square.style.setProperty("width",`144`);
+
+        doc.appendChild(square);
+    }
+}
+
+init();

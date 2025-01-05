@@ -1,134 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="/favicon.png" rel="icon">
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
     <title>Luca | Software Engineer</title>
 
-    <!-- style -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./styles.css" />
-
-    <!-- animation scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
-    <script src="./grid.js" type="module" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" defer></script>
-    <script src="./animation.js" type="module" defer></script>
-
-    <!-- other page scripts -->
-    <script src="./main.js" type="module" defer></script>
+    <script defer src="main.js"></script>
   </head>
   <body>
-    <nav>
-      <ul class="navigation">
-        <li class="navitem portfolio">
-          <a href="#projects"><span>Portfolio</span></a>
-          <ul class="portfolio-drop"></ul>
-        </li>
-        <!-- <li class="navitem">
-          <a href=""><span>About</span></a>
-        </li>
-        <li class="navitem">
-          <a href=""><span>Contact</span></a>
-        </li> -->
-        <li data-social="true" class="navitem" style="margin-left: auto;">
-          <a href="https://twitter.com/lucaledd" class="bx bxl-twitter" alt="Twitter"></a> 
-        </li>
-        <li data-social="true" class="navitem">
-          <a href="https://github.com/lucaledd" class="bx bxl-github" alt="GitHub"></a> 
-        </li>
-      </ul>
-    </nav>
-    <main>
-      <div class="main-wrapper">
-        <div class="title">
-          <div class="text">
-            <h1 class="intro">Hi! I'm Luca.</h1>
-            <div class="description">
-              <p>
-                Also known as <span>lucaledd</span>,
-                I'm a student currently trying 
-                <span class="accent2">game hacking</span>, <span class="accent2">networking</span> and <span class="accent2">integrated circuits</span>, 
-                <span class="accent2">APIs</span> and <span class="accent2">back-end</span>,
-                or really any type of project my mind comes up with. 
-              </p>
-              <p>
-                I also work with <span class="accent3">front-end</span>: design and programming, looking forwards
-                to create <span class="accent2">modern looking</span> apps and <span class="accent3">websites.</span>
-              </p>
-            </div>
-          </div>
-          <div class="scene" style="background: rgb(233, 235, 246)">
-            <div class="animate-box" style="background: rgba(246, 246, 246, 0); border-radius: 30%">
-                <svg class="svg-container" viewBox="-50 -50 200 200" style="transform: rotate(20deg)">
-                    <circle cx="50" cy="50" r="40" class="sun-circle" style="fill: rgb(92, 107, 192)"></circle>
-                    <circle cx="72" cy="34" r="40" class="moon-shadow" style="fill: rgb(92, 107, 192); transform: translateX(54px) translateY(-4px) scale(0.5);"></circle>
-    
-                    <line x1="50" y1="-25" x2="50" y2="-5" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
-                    <line x1="50" y1="125" x2="50" y2="105" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
-    
-                    <line x1="-25" y1="50" x2="-5" y2="50" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
-                    <line x1="125" y1="50" x2="105" y2="50" class="sun-rays" style="stroke: rgb(92, 107, 192);"></line>
-    
-                    <line x1="-5" y1="-5" x2="10" y2="10" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
-                    <line x1="90" y1="90" x2="105" y2="105" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
-    
-                    <line x1="15" y1="85" x2="-5" y2="105" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
-                    <line x1="105" y1="-5" x2="85" y2="15" class="sun-rays" style="stroke: rgb(92, 107, 192)"></line>
-    
-                    Sorry, your browser does not support inline SVG.
-                </svg>
-            </div>
-            <div class="fragment-bg">
-              <i class="bx bxl-javascript" style="color:#ffd300"></i>
-              <i class="bx bxl-java" style="color:#ffffff"></i>
-              <i class="bx bxs-video" style="color:#ffffff" ></i>
-              <i class="bx bxl-c-plus-plus" style="color:#0824c2"  ></i>
-            </div>
-            <div class="fragment"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <section id="projects">
-      <div class="project-wrapper">
-        <a id="swift" class="project" href="https://swiftproject.top">
-          <h3>Team</h3>
-          <h1>Swift Project</h1>
-          <div class="pr">
-            <p>Swift is the name of our team and the name of the projects that we are currently developing, ranging from game modifications and kernel drivers to access delegation and file uploaders.</p>
-            <br />
-            <p>Languages used (website): HTML, CSS, JavaScript</p>
-            <p>Languages used (projects): C++, C#, Java, JS/React/SvelteKit</p>
-          </div>
-          <img src="/images/projects/swiftalts.png" class="project-image" alt />
-        </a>
-        <a id="swift" class="project" href="https://swiftproject.store">
-          <h3>Website + API/Backend</h3>
-          <h1>Swift Store</h1>
-          <div class="pr">
-            <p>A storefront for all Swift products.</p>
-            <br />
-            <p>Languages used (website + backend): HTML, CSS, JavaScript</p>
-          </div>
-          <img src="https://swiftproject.top/swiftc.png" class="project-image" alt />
-        </a>
-        <a id="kingalts" class="project" href="./projects/kingalts/">
-          <h3>Website</h3>
-          <h1>KingAlts</h1>
-          <div class="pr">
-            <p>Languages used: HTML, CSS, JavaScript</p>
-          </div>
-          <img src="/images/projects/kingalts.gif" class="project-image" alt />
-        </a>
-        <!-- <a id="fluxclient" class="project" href="./projects/fluxclient/">
-          <h3>Website</h3>
-          <h1>Flux Client</h1>
-          <img src="./assets/images/projects/fluxclient.png" class="project-image" alt />
-        </a> -->
-      </div>
-    </section>
+    <div class="render"></div>
   </body>
 </html>
