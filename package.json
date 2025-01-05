@@ -1,0 +1,17 @@
+{
+  "name": "lucaledd.fun",
+  "private": false,
+  "repository": {
+    "url": "https://github.com/lucaledd/website"
+  },
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  }
+}
